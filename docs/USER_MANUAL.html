@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Panduan Pengguna AgenPro v1.2.0</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Panduan Pengguna AgenPro v1.2.0</h1>
+</header>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#panduan-pengguna-agenpro"
+id="toc-panduan-pengguna-agenpro">Panduan Pengguna AgenPro</a>
+<ul>
+<li><a href="#daftar-isi" id="toc-daftar-isi">Daftar Isi</a></li>
+<li><a href="#pengenalan" id="toc-pengenalan">1. Pengenalan</a>
+<ul>
+<li><a href="#fitur-utama-v1.2.0" id="toc-fitur-utama-v1.2.0">Fitur
+Utama v1.2.0</a></li>
+</ul></li>
+<li><a href="#instalasi-persiapan" id="toc-instalasi-persiapan">2.
+Instalasi &amp; Persiapan</a>
+<ul>
+<li><a href="#instalasi" id="toc-instalasi">2.1 Instalasi</a></li>
+<li><a href="#syarat-minimal" id="toc-syarat-minimal">2.2 Syarat
+Minimal</a></li>
+<li><a href="#setup-profil-awal" id="toc-setup-profil-awal">2.3 Setup
+Profil Awal</a></li>
+</ul></li>
+<li><a href="#onboarding-pertama-kali"
+id="toc-onboarding-pertama-kali">3. Onboarding Pertama Kali</a></li>
+<li><a href="#manajemen-prospek" id="toc-manajemen-prospek">4. Manajemen
+Prospek</a>
+<ul>
+<li><a href="#menambah-prospek" id="toc-menambah-prospek">4.1 Menambah
+Prospek</a></li>
+<li><a href="#melihat-detail-prospek"
+id="toc-melihat-detail-prospek">4.2 Melihat Detail Prospek</a></li>
+<li><a href="#edit-hapus" id="toc-edit-hapus">4.3 Edit &amp;
+Hapus</a></li>
+<li><a href="#filter-cari" id="toc-filter-cari">4.4 Filter &amp;
+Cari</a></li>
+<li><a href="#konversi-ke-nasabah" id="toc-konversi-ke-nasabah">4.5
+Konversi ke Nasabah</a></li>
+</ul></li>
+<li><a href="#manajemen-nasabah" id="toc-manajemen-nasabah">5. Manajemen
+Nasabah</a>
+<ul>
+<li><a href="#menambah-nasabah" id="toc-menambah-nasabah">5.1 Menambah
+Nasabah</a></li>
+<li><a href="#cari-filter" id="toc-cari-filter">5.2 Cari &amp;
+Filter</a></li>
+<li><a href="#badge-jatuh-tempo" id="toc-badge-jatuh-tempo">5.3 Badge
+Jatuh Tempo</a></li>
+<li><a href="#kontak-cepat" id="toc-kontak-cepat">5.4 Kontak
+Cepat</a></li>
+<li><a href="#hapus-nasabah" id="toc-hapus-nasabah">5.5 Hapus
+Nasabah</a></li>
+</ul></li>
+<li><a href="#manajemen-polis" id="toc-manajemen-polis">6. Manajemen
+Polis</a>
+<ul>
+<li><a href="#menambah-polis" id="toc-menambah-polis">6.1 Menambah
+Polis</a></li>
+<li><a href="#edit-hapus-polis" id="toc-edit-hapus-polis">6.2 Edit &amp;
+Hapus Polis</a></li>
+<li><a href="#status-polis" id="toc-status-polis">6.3 Status
+Polis</a></li>
+<li><a href="#multiple-polis" id="toc-multiple-polis">6.4 Multiple
+Polis</a></li>
+</ul></li>
+<li><a href="#pembayaran-premi" id="toc-pembayaran-premi">7. Pembayaran
+Premi</a>
+<ul>
+<li><a href="#mencatat-pembayaran" id="toc-mencatat-pembayaran">7.1
+Mencatat Pembayaran</a></li>
+<li><a href="#auto-roll-jatuh-tempo" id="toc-auto-roll-jatuh-tempo">7.2
+Auto-Roll Jatuh Tempo</a></li>
+<li><a href="#riwayat-pembayaran" id="toc-riwayat-pembayaran">7.3
+Riwayat Pembayaran</a></li>
+<li><a href="#hapus-pembayaran" id="toc-hapus-pembayaran">7.4 Hapus
+Pembayaran</a></li>
+</ul></li>
+<li><a href="#interaksi-nasabah" id="toc-interaksi-nasabah">8. Interaksi
+Nasabah</a>
+<ul>
+<li><a href="#menambah-interaksi" id="toc-menambah-interaksi">8.1
+Menambah Interaksi</a></li>
+<li><a href="#hapus-interaksi" id="toc-hapus-interaksi">8.2 Hapus
+Interaksi</a></li>
+<li><a href="#manfaat" id="toc-manfaat">8.3 Manfaat</a></li>
+</ul></li>
+<li><a href="#dashboard-premi" id="toc-dashboard-premi">9. Dashboard
+Premi</a>
+<ul>
+<li><a href="#ape-bulan-ini" id="toc-ape-bulan-ini">9.1 APE Bulan
+Ini</a></li>
+<li><a href="#ape-tahun-ini" id="toc-ape-tahun-ini">9.2 APE Tahun
+Ini</a></li>
+<li><a href="#target-ape" id="toc-target-ape">9.3 Target APE</a></li>
+<li><a href="#grafik-tren-6-bulan" id="toc-grafik-tren-6-bulan">9.4
+Grafik Tren 6 Bulan</a></li>
+<li><a href="#portofolio-aktif" id="toc-portofolio-aktif">9.5 Portofolio
+Aktif</a></li>
+<li><a href="#jatuh-tempo-30-hari" id="toc-jatuh-tempo-30-hari">9.6
+Jatuh Tempo 30 Hari</a></li>
+</ul></li>
+<li><a href="#agenda-follow-up" id="toc-agenda-follow-up">10. Agenda
+&amp; Follow-up</a>
+<ul>
+<li><a href="#menambah-agenda" id="toc-menambah-agenda">10.1 Menambah
+Agenda</a></li>
+<li><a href="#kelompok-agenda" id="toc-kelompok-agenda">10.2 Kelompok
+Agenda</a></li>
+<li><a href="#snooze-tunda" id="toc-snooze-tunda">10.3 Snooze
+(Tunda)</a></li>
+<li><a href="#notifikasi-pengingat" id="toc-notifikasi-pengingat">10.4
+Notifikasi Pengingat</a></li>
+<li><a href="#tandai-selesai" id="toc-tandai-selesai">10.5 Tandai
+Selesai</a></li>
+</ul></li>
+<li><a href="#pipeline-penjualan" id="toc-pipeline-penjualan">11.
+Pipeline Penjualan</a>
+<ul>
+<li><a href="#tampilan-mobile" id="toc-tampilan-mobile">11.1 Tampilan
+Mobile</a></li>
+<li><a href="#tampilan-tablet" id="toc-tampilan-tablet">11.2 Tampilan
+Tablet</a></li>
+<li><a href="#tahap-pipeline" id="toc-tahap-pipeline">11.3 Tahap
+Pipeline</a></li>
+</ul></li>
+<li><a href="#whatsapp-integration" id="toc-whatsapp-integration">12.
+WhatsApp Integration</a>
+<ul>
+<li><a href="#kirim-whatsapp-dari-prospeknasabah"
+id="toc-kirim-whatsapp-dari-prospeknasabah">12.1 Kirim WhatsApp dari
+Prospek/Nasabah</a></li>
+<li><a href="#template-whatsapp" id="toc-template-whatsapp">12.2
+Template WhatsApp</a></li>
+<li><a href="#edit-template" id="toc-edit-template">12.3 Edit
+Template</a></li>
+</ul></li>
+<li><a href="#pengaturan-kustomisasi"
+id="toc-pengaturan-kustomisasi">13. Pengaturan &amp; Kustomisasi</a>
+<ul>
+<li><a href="#tema-warna" id="toc-tema-warna">13.1 Tema Warna</a></li>
+<li><a href="#mode-gelap" id="toc-mode-gelap">13.2 Mode Gelap</a></li>
+<li><a href="#target-penjualan" id="toc-target-penjualan">13.3 Target
+Penjualan</a></li>
+<li><a href="#pin-lock" id="toc-pin-lock">13.4 PIN Lock</a></li>
+<li><a href="#business-card" id="toc-business-card">13.5 Business
+Card</a></li>
+</ul></li>
+<li><a href="#backup-restore" id="toc-backup-restore">14. Backup &amp;
+Restore</a>
+<ul>
+<li><a href="#backup-ke-perangkat" id="toc-backup-ke-perangkat">14.1
+Backup ke Perangkat</a></li>
+<li><a href="#restore-dari-backup" id="toc-restore-dari-backup">14.2
+Restore dari Backup</a></li>
+<li><a href="#backup-otomatis" id="toc-backup-otomatis">14.3 Backup
+Otomatis</a></li>
+<li><a href="#backup-ke-google-drive-opsional"
+id="toc-backup-ke-google-drive-opsional">14.4 Backup ke Google Drive
+(Opsional)</a></li>
+</ul></li>
+<li><a href="#import-export-csv" id="toc-import-export-csv">15. Import
+&amp; Export CSV</a>
+<ul>
+<li><a href="#export-csv" id="toc-export-csv">15.1 Export CSV</a></li>
+<li><a href="#import-prospek-csv" id="toc-import-prospek-csv">15.2
+Import Prospek CSV</a></li>
+<li><a href="#import-polis-csv" id="toc-import-polis-csv">15.3 Import
+Polis CSV</a></li>
+</ul></li>
+<li><a href="#faq" id="toc-faq">16. FAQ</a></li>
+<li><a href="#kontak-dukungan" id="toc-kontak-dukungan">17. Kontak &amp;
+Dukungan</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="panduan-pengguna-agenpro">Panduan Pengguna AgenPro</h1>
+<p><strong>Versi: 1.2.0</strong> <strong>Terakhir diperbarui: 28
+September 2026</strong></p>
+<hr />
+<h2 id="daftar-isi">Daftar Isi</h2>
+<ol type="1">
+<li>Pengenalan</li>
+<li>Instalasi &amp; Persiapan</li>
+<li>Onboarding Pertama Kali</li>
+<li>Manajemen Prospek</li>
+<li>Manajemen Nasabah</li>
+<li>Manajemen Polis</li>
+<li>Pembayaran Premi</li>
+<li>Interaksi Nasabah</li>
+<li>Dashboard Premi</li>
+<li>Agenda &amp; Follow-up</li>
+<li>Pipeline Penjualan</li>
+<li>WhatsApp Integration</li>
+<li>Pengaturan &amp; Kustomisasi</li>
+<li>Backup &amp; Restore</li>
+<li>Import &amp; Export CSV</li>
+<li>FAQ</li>
+<li>Kontak &amp; Dukungan</li>
+</ol>
+<hr />
+<h2 id="pengenalan">1. Pengenalan</h2>
+<p><strong>AgenPro</strong> adalah aplikasi sales funnel untuk agen
+asuransi yang membantu Anda:</p>
+<ul>
+<li>Mengelola prospek dari awal sampai closing</li>
+<li>Menyimpan database nasabah dengan multiple polis</li>
+<li>Mencatat pembayaran premi &amp; mengingatkan jatuh tempo</li>
+<li>Memantau APE (Annualized Premium Equivalent) &amp; target</li>
+<li>Mengatur agenda follow-up otomatis</li>
+<li>Kirim WhatsApp dengan template</li>
+<li>Melihat statistik penjualan &amp; grafik tren</li>
+</ul>
+<h3 id="fitur-utama-v1.2.0">Fitur Utama v1.2.0</h3>
+<ul>
+<li>Data tersimpan 100% lokal di HP Anda (privat &amp; aman)</li>
+<li>Backup terenkripsi dengan PIN</li>
+<li>Dark mode &amp; multi-tema (Hijau, Navy, Merah)</li>
+<li>PIN lock untuk keamanan</li>
+<li>Template WhatsApp yang bisa dikustomisasi</li>
+<li>Multiple polis per nasabah</li>
+<li>Dashboard Premi — APE, Target, Grafik Tren 6 Bulan</li>
+<li>Reminder Jatuh Tempo otomatis (H-30/H-7/H-1)</li>
+<li>Import CSV prospek &amp; polis (bulk)</li>
+<li>Dukungan tablet (layout 2 kolom)</li>
+</ul>
+<hr />
+<h2 id="instalasi-persiapan">2. Instalasi &amp; Persiapan</h2>
+<h3 id="instalasi">2.1 Instalasi</h3>
+<ol type="1">
+<li>Download file <code>app-release.apk</code> dari:
+https://github.com/denysuse/agenpro-releases/releases/latest</li>
+<li>Buka File Manager, cari file APK</li>
+<li>Tap file, lalu Install</li>
+<li>Izinkan “Install from unknown sources” jika diminta</li>
+<li>Buka aplikasi AgenPro</li>
+</ol>
+<h3 id="syarat-minimal">2.2 Syarat Minimal</h3>
+<ul>
+<li>Android 8.0 (API 26) atau lebih baru</li>
+<li>Ruang penyimpanan: ~10 MB</li>
+<li>Internet: Tidak wajib (hanya untuk backup ke Drive)</li>
+</ul>
+<h3 id="setup-profil-awal">2.3 Setup Profil Awal</h3>
+<ol type="1">
+<li>Buka Pengaturan, lalu Profil Saya</li>
+<li>Isi: Nama Agen (wajib), Nama Perusahaan, No WhatsApp</li>
+<li>Tap “Tampilkan Data Lainnya” untuk isi: Alamat Email,
+Posisi/Jabatan, Kode Agen, Alamat Agency/Branch</li>
+<li>Tap “Simpan Profil”</li>
+</ol>
+<hr />
+<h2 id="onboarding-pertama-kali">3. Onboarding Pertama Kali</h2>
+<p>Saat pertama kali buka, akan muncul 4 slide:</p>
+<ol type="1">
+<li>Slide 1: Selamat datang</li>
+<li>Slide 2: Fitur pipeline</li>
+<li>Slide 3: WhatsApp template</li>
+<li>Slide 4: Pilih salah satu
+<ul>
+<li>“Isi Data Contoh” untuk coba dengan data dummy</li>
+<li>“Mulai dari Kosong” untuk mulai dari nol</li>
+</ul></li>
+</ol>
+<p>Setelah selesai, Anda masuk ke Beranda.</p>
+<hr />
+<h2 id="manajemen-prospek">4. Manajemen Prospek</h2>
+<h3 id="menambah-prospek">4.1 Menambah Prospek</h3>
+<ol type="1">
+<li>Buka tab Prospek (ikon di bawah)</li>
+<li>Tap tombol + (kanan bawah)</li>
+<li>Isi data: Nama (wajib), No HP/WA, Kota Domisili, Sumber Prospek,
+Tahap Pipeline (Prospek/Kualifikasi/Presentasi/Proposal/Closing),
+Estimasi Premi, Suhu Prospek (Dingin/Hangat/Panas), Catatan</li>
+<li>Tap “Simpan”</li>
+</ol>
+<h3 id="melihat-detail-prospek">4.2 Melihat Detail Prospek</h3>
+<p>Tap kartu prospek untuk melihat: Info lengkap, Timeline Aktivitas,
+Riwayat Tahap Funnel, dan Riwayat Follow-up.</p>
+<h3 id="edit-hapus">4.3 Edit &amp; Hapus</h3>
+<ul>
+<li>Edit: Buka detail, tap ikon pensil</li>
+<li>Hapus: Swipe kartu ke kiri ATAU tap ikon tong sampah</li>
+<li>Dialog konfirmasi akan muncul sebelum data dihapus</li>
+</ul>
+<h3 id="filter-cari">4.4 Filter &amp; Cari</h3>
+<ul>
+<li>Cari: Ketik di search bar</li>
+<li>Filter Lanjutan: Tap tombol “Filter lanjutan prospek”</li>
+<li>Filter berdasarkan tanggal, tahap, kota, sumber</li>
+<li>“Belum nasabah” untuk prospek yang belum dikonversi</li>
+<li>“Tanpa follow-up” untuk prospek tanpa agenda</li>
+</ul>
+<h3 id="konversi-ke-nasabah">4.5 Konversi ke Nasabah</h3>
+<p>Ketika prospek closing:</p>
+<ol type="1">
+<li>Buka detail prospek</li>
+<li>Tap “Jadikan Nasabah”</li>
+<li>Preview data: nama, HP/WA, domisili akan disalin ke nasabah</li>
+<li>Tap “Konversi”</li>
+</ol>
+<p>Catatan: Produk &amp; polis tidak diinput di sini. Setelah jadi
+nasabah, tambahkan polis via Detail Nasabah, lalu tap tombol + Tambah
+Polis.</p>
+<hr />
+<h2 id="manajemen-nasabah">5. Manajemen Nasabah</h2>
+<h3 id="menambah-nasabah">5.1 Menambah Nasabah</h3>
+<ol type="1">
+<li>Buka tab Nasabah</li>
+<li>Tap tombol +</li>
+<li>Isi data: Nama (wajib), No HP/WA, Kota Domisili, Tanggal Lahir</li>
+<li>Tap “Simpan”</li>
+</ol>
+<p>Catatan v1.2.0: Nasabah hanya menyimpan identitas. Produk, nomor
+polis, premi, dan tanggal jatuh tempo diinput di masing-masing
+polis.</p>
+<h3 id="cari-filter">5.2 Cari &amp; Filter</h3>
+<ul>
+<li>Cari: Nama, HP/WA, atau domisili</li>
+<li>Filter: Tap ikon di kanan search bar</li>
+<li>Pilihan: Nama (A-Z), Nama (Z-A), Domisili (A-Z), Terbaru</li>
+</ul>
+<h3 id="badge-jatuh-tempo">5.3 Badge Jatuh Tempo</h3>
+<p>Di card nasabah, ada badge yang muncul otomatis:</p>
+<ul>
+<li>Merah: Jatuh tempo 7 hari atau kurang / sudah lewat</li>
+<li>Oranye: Jatuh tempo 8-14 hari</li>
+<li>Kuning: Jatuh tempo 15-30 hari</li>
+</ul>
+<h3 id="kontak-cepat">5.4 Kontak Cepat</h3>
+<p>Tap ikon WhatsApp di kartu nasabah untuk buka chat.</p>
+<h3 id="hapus-nasabah">5.5 Hapus Nasabah</h3>
+<p>Tap ikon tong sampah, konfirmasi, maka data nasabah dan semua
+polisnya akan terhapus.</p>
+<hr />
+<h2 id="manajemen-polis">6. Manajemen Polis</h2>
+<h3 id="menambah-polis">6.1 Menambah Polis</h3>
+<ol type="1">
+<li>Buka Detail Nasabah</li>
+<li>Tap + di section Polis</li>
+<li>Isi: Produk, Nomor Polis, Premi per Periode, Periode Pembayaran
+(Bulanan/Kuartalan/Semesteran/Tahunan), Tanggal Mulai, Jatuh Tempo
+Berikutnya, Tanggal Polis Berakhir, Catatan (opsional)</li>
+<li>Tap “Simpan”</li>
+</ol>
+<h3 id="edit-hapus-polis">6.2 Edit &amp; Hapus Polis</h3>
+<ul>
+<li>Edit: Tap ikon pensil di kartu polis</li>
+<li>Hapus: Tap ikon tong sampah, lalu konfirmasi</li>
+</ul>
+<h3 id="status-polis">6.3 Status Polis</h3>
+<ul>
+<li>Aktif: Polis berjalan normal</li>
+<li>Jatuh Tempo: Akan jatuh tempo 30 hari atau kurang</li>
+<li>Lapsed: Jatuh tempo sudah lewat</li>
+<li>Selesai: Polis berakhir</li>
+</ul>
+<h3 id="multiple-polis">6.4 Multiple Polis</h3>
+<p>Satu nasabah bisa punya banyak polis. Contoh: Ahmad Dahlan punya
+Asuransi Kesehatan (Rp 12jt/bulan) dan Asuransi Jiwa (Rp 18jt/tahun).
+Setiap polis punya reminder jatuh tempo sendiri.</p>
+<hr />
+<h2 id="pembayaran-premi">7. Pembayaran Premi</h2>
+<h3 id="mencatat-pembayaran">7.1 Mencatat Pembayaran</h3>
+<ol type="1">
+<li>Buka Detail Nasabah, lalu Detail Polis</li>
+<li>Tap ikon bayar (ikon uang)</li>
+<li>Isi: Jumlah Dibayar (default: premi polis), Tanggal Pembayaran,
+Metode (Transfer/Autodebet/Tunai/Kartu Kredit/E-Wallet), Catatan
+(opsional)</li>
+<li>Tap “Simpan”</li>
+</ol>
+<h3 id="auto-roll-jatuh-tempo">7.2 Auto-Roll Jatuh Tempo</h3>
+<p>Setiap kali Anda mencatat pembayaran, jatuh tempo polis otomatis maju
++1 periode:</p>
+<ul>
+<li>Bulanan: +30 hari</li>
+<li>Kuartalan: +90 hari</li>
+<li>Semesteran: +180 hari</li>
+<li>Tahunan: +365 hari</li>
+</ul>
+<p>Contoh: Polis jatuh tempo 30 Nov 2026, Anda catat pembayaran, maka
+jatuh tempo berikutnya otomatis jadi 30 Des 2026.</p>
+<h3 id="riwayat-pembayaran">7.3 Riwayat Pembayaran</h3>
+<p>Di Detail Nasabah ada section Riwayat Pembayaran:</p>
+<ul>
+<li>Total Dibayar: akumulasi semua pembayaran</li>
+<li>List pembayaran: tanggal, jumlah, metode, catatan</li>
+</ul>
+<h3 id="hapus-pembayaran">7.4 Hapus Pembayaran</h3>
+<p>Tap ikon tong sampah di item pembayaran, konfirmasi, data
+terhapus.</p>
+<p>Catatan: Hapus pembayaran tidak mengembalikan jatuh tempo polis. Anda
+perlu edit polis manual jika perlu.</p>
+<hr />
+<h2 id="interaksi-nasabah">8. Interaksi Nasabah</h2>
+<h3 id="menambah-interaksi">8.1 Menambah Interaksi</h3>
+<ol type="1">
+<li>Buka Detail Nasabah, section Interaksi Terakhir</li>
+<li>Tap + di kanan header</li>
+<li>Isi: Jenis (Telepon/WhatsApp/Kunjungan/Email/Lainnya), Judul
+(wajib), Catatan (opsional), Tanggal &amp; Waktu</li>
+<li>Tap “Simpan”</li>
+</ol>
+<h3 id="hapus-interaksi">8.2 Hapus Interaksi</h3>
+<p>Tap ikon tong sampah di item interaksi, konfirmasi, terhapus.</p>
+<h3 id="manfaat">8.3 Manfaat</h3>
+<p>Interaksi membantu Anda track riwayat komunikasi dengan nasabah.
+Contoh: telepon konfirmasi polis (25 Sep), WhatsApp reminder premi (20
+Sep), kunjungan review portofolio (15 Sep).</p>
+<hr />
+<h2 id="dashboard-premi">9. Dashboard Premi</h2>
+<p>Di Beranda ada section Dashboard Premi dengan 5 komponen:</p>
+<h3 id="ape-bulan-ini">9.1 APE Bulan Ini</h3>
+<p>APE (Annualized Premium Equivalent) = premi disetahunkan.</p>
+<p>Rumus:</p>
+<ul>
+<li>Bulanan x 12</li>
+<li>Kuartalan x 4</li>
+<li>Semesteran x 2</li>
+<li>Tahunan x 1</li>
+</ul>
+<p>Contoh: Polis baru bulan ini Rp 15jt/bulan, maka APE = Rp 180jt.</p>
+<h3 id="ape-tahun-ini">9.2 APE Tahun Ini</h3>
+<p>Total APE dari semua polis yang dibuat tahun ini (Jan-Des). Berguna
+untuk pencapaian kontes dan target tahunan.</p>
+<h3 id="target-ape">9.3 Target APE</h3>
+<p>Set target di Pengaturan, lalu Target Penjualan:</p>
+<ul>
+<li>Target APE per Bulan (Rp)</li>
+<li>Target APE per Tahun (Rp)</li>
+</ul>
+<p>Progress bar akan muncul otomatis dengan warna: Merah (kurang dari
+50%), Oranye (50-80%), Hijau (lebih dari 80%).</p>
+<h3 id="grafik-tren-6-bulan">9.4 Grafik Tren 6 Bulan</h3>
+<p>Bar chart menunjukkan APE per bulan selama 6 bulan terakhir. Bulan
+ini di-highlight dengan warna lebih gelap.</p>
+<h3 id="portofolio-aktif">9.5 Portofolio Aktif</h3>
+<p>Jumlah polis dengan status “Aktif” untuk dipantau agar tidak
+lapsed.</p>
+<h3 id="jatuh-tempo-30-hari">9.6 Jatuh Tempo 30 Hari</h3>
+<p>List polis yang akan jatuh tempo dalam 30 hari ke depan, dengan badge
+warna:</p>
+<ul>
+<li>Merah: Lewat / 7 hari atau kurang</li>
+<li>Oranye: 8-14 hari</li>
+<li>Kuning: 15-30 hari</li>
+</ul>
+<hr />
+<h2 id="agenda-follow-up">10. Agenda &amp; Follow-up</h2>
+<h3 id="menambah-agenda">10.1 Menambah Agenda</h3>
+<ol type="1">
+<li>Buka tab Agenda</li>
+<li>Tap +</li>
+<li>Isi: Judul (wajib), Prospek terkait, Jenis
+(Telepon/Pertemuan/Presentasi/Kirim Proposal/dll), Waktu Mulai,
+Pengingat (1 jam/3 jam/1 hari/3 hari sebelum), Keterangan</li>
+<li>Tap “Simpan”</li>
+</ol>
+<h3 id="kelompok-agenda">10.2 Kelompok Agenda</h3>
+<p>Agenda otomatis dikelompokkan: Terlambat (sudah lewat), Hari ini,
+Berikutnya (mendatang).</p>
+<h3 id="snooze-tunda">10.3 Snooze (Tunda)</h3>
+<p>Tap ikon jam di baris agenda untuk tunda 1 jam, 3 jam, 1 hari, 3
+hari, atau pilih tanggal dan waktu spesifik.</p>
+<h3 id="notifikasi-pengingat">10.4 Notifikasi Pengingat</h3>
+<p>Aplikasi mengirim notifikasi sesuai waktu pengingat yang diatur.</p>
+<h3 id="tandai-selesai">10.5 Tandai Selesai</h3>
+<p>Tap checkbox di kiri agenda untuk tandai selesai.</p>
+<hr />
+<h2 id="pipeline-penjualan">11. Pipeline Penjualan</h2>
+<h3 id="tampilan-mobile">11.1 Tampilan Mobile</h3>
+<p>Di HP, pipeline tampil sebagai tab per tahap yang bisa di-swipe.</p>
+<h3 id="tampilan-tablet">11.2 Tampilan Tablet</h3>
+<p>Di tablet, pipeline tampil sebagai kolom Kanban berdampingan.</p>
+<h3 id="tahap-pipeline">11.3 Tahap Pipeline</h3>
+<ol type="1">
+<li>Prospek - Kontak awal</li>
+<li>Kualifikasi - Menilai kebutuhan</li>
+<li>Presentasi - Demo produk</li>
+<li>Proposal - Kirim penawaran</li>
+<li>Closing - Akad/penutupan</li>
+</ol>
+<hr />
+<h2 id="whatsapp-integration">12. WhatsApp Integration</h2>
+<h3 id="kirim-whatsapp-dari-prospeknasabah">12.1 Kirim WhatsApp dari
+Prospek/Nasabah</h3>
+<ol type="1">
+<li>Buka Prospek atau Detail Nasabah</li>
+<li>Tap ikon WhatsApp (hijau)</li>
+<li>Pilih Template atau tulis pesan manual</li>
+<li>Tap “Kirim”, WhatsApp terbuka</li>
+</ol>
+<h3 id="template-whatsapp">12.2 Template WhatsApp</h3>
+<p>Template default: Follow-up awal, Pengingat jatuh tempo, Ucapan ulang
+tahun, Konfirmasi pertemuan.</p>
+<h3 id="edit-template">12.3 Edit Template</h3>
+<p>Template bisa dikustomisasi di dialog WhatsApp (tap “Edit
+Template”).</p>
+<hr />
+<h2 id="pengaturan-kustomisasi">13. Pengaturan &amp; Kustomisasi</h2>
+<h3 id="tema-warna">13.1 Tema Warna</h3>
+<p>Pengaturan, lalu Warna Tema. Pilih: Hijau, Navy Premium, atau
+Merah.</p>
+<h3 id="mode-gelap">13.2 Mode Gelap</h3>
+<p>Pengaturan, lalu Tampilan. Pilih: Ikuti sistem, Terang, atau
+Gelap.</p>
+<h3 id="target-penjualan">13.3 Target Penjualan</h3>
+<p>Pengaturan, lalu Target Penjualan:</p>
+<ul>
+<li>Target APE per Bulan (Rp)</li>
+<li>Target APE per Tahun (Rp)</li>
+</ul>
+<p>Akan ditampilkan di Dashboard Premi dan Hero Card Beranda.</p>
+<h3 id="pin-lock">13.4 PIN Lock</h3>
+<p>Pengaturan, lalu Keamanan Aplikasi:</p>
+<ol type="1">
+<li>Input PIN (minimal 4 digit)</li>
+<li>Tap “Aktifkan PIN”</li>
+<li>Saat buka aplikasi, akan diminta PIN</li>
+<li>Untuk menonaktifkan: tap “Nonaktifkan”</li>
+</ol>
+<h3 id="business-card">13.5 Business Card</h3>
+<p>Pengaturan, lalu Lihat Business Card. Menampilkan QR code berisi
+kontak Anda (vCard). Orang lain bisa scan untuk menyimpan kontak.</p>
+<hr />
+<h2 id="backup-restore">14. Backup &amp; Restore</h2>
+<h3 id="backup-ke-perangkat">14.1 Backup ke Perangkat</h3>
+<ol type="1">
+<li>Pengaturan, Laporan, lalu “Simpan di perangkat”</li>
+<li>Pilih lokasi (Download, Drive, dll)</li>
+<li>Input PIN backup</li>
+<li>Tap “Lanjutkan”</li>
+</ol>
+<p>Hasil: File .db terenkripsi (aman).</p>
+<h3 id="restore-dari-backup">14.2 Restore dari Backup</h3>
+<ol type="1">
+<li>Pengaturan, Laporan, lalu “Pulihkan file”</li>
+<li>Pilih file backup</li>
+<li>Input PIN backup</li>
+<li>Tap “Lanjutkan”</li>
+</ol>
+<p>Peringatan: Restore akan menimpa data saat ini.</p>
+<h3 id="backup-otomatis">14.3 Backup Otomatis</h3>
+<p>Aplikasi otomatis backup sekali sehari (kalau baterai cukup).</p>
+<h3 id="backup-ke-google-drive-opsional">14.4 Backup ke Google Drive
+(Opsional)</h3>
+<p>Fitur ini memerlukan akun Google. Data tetap di Drive pribadi
+Anda.</p>
+<hr />
+<h2 id="import-export-csv">15. Import &amp; Export CSV</h2>
+<h3 id="export-csv">15.1 Export CSV</h3>
+<p>Pengaturan, Laporan, lalu “Ekspor laporan CSV”. Format: Jenis, Nama,
+HP/Domisili, Produk, No. Polis, Tahap/Jenis, Tanggal, Status. File bisa
+dibuka di Excel atau Google Sheets.</p>
+<h3 id="import-prospek-csv">15.2 Import Prospek CSV</h3>
+<p>Pengaturan, Laporan, lalu “Impor prospek dari template CSV”.</p>
+<p>Format kolom: nama, no hp, kota, sumber, tahap, suhu, estimasi
+premi.</p>
+<h3 id="import-polis-csv">15.3 Import Polis CSV</h3>
+<p>Pengaturan, Laporan, lalu “Impor polis dari CSV”.</p>
+<p>Format kolom: nama, nomorPolis, produk, premi, periode, tanggalMulai,
+tanggalJatuhTempo, status.</p>
+<p>Aturan:</p>
+<ul>
+<li>nama harus match dengan nasabah yang sudah ada
+(case-insensitive)</li>
+<li>periode = Bulanan/Kuartalan/Semesteran/Tahunan</li>
+<li>tanggalMulai dan tanggalJatuhTempo = format yyyy-MM-dd</li>
+<li>Kalau nasabah tidak ketemu, baris di-skip (ada tanda X di
+preview)</li>
+</ul>
+<hr />
+<h2 id="faq">16. FAQ</h2>
+<p>Q: Apakah data saya aman? A: Ya. Semua data tersimpan lokal di HP
+Anda (Room database). Kami tidak memiliki akses ke data Anda. Backup
+terenkripsi dengan PIN.</p>
+<p>Q: Bagaimana kalau HP saya hilang? A: Data akan hilang kecuali Anda
+punya backup. Rekomendasi: Backup rutin ke Google Drive atau
+flashdisk.</p>
+<p>Q: Apakah bisa dipakai di beberapa HP? A: Tidak secara langsung. Anda
+perlu backup di HP 1, lalu restore di HP 2.</p>
+<p>Q: Apakah butuh internet? A: Tidak untuk fungsi utama. Internet hanya
+untuk backup Google Drive (opsional) dan update aplikasi.</p>
+<p>Q: Bagaimana cara export data? A: Pengaturan, Laporan, lalu “Ekspor
+laporan CSV”. File bisa dibuka di Excel.</p>
+<p>Q: PIN saya lupa, bagaimana? A: Sayangnya, PIN tidak bisa dipulihkan
+(demi keamanan). Anda perlu uninstall, lalu install ulang (data
+hilang).</p>
+<p>Q: Apakah ada versi iOS? A: Belum. Saat ini hanya Android.</p>
+<p>Q: Bagaimana cara update aplikasi? A: Download APK versi terbaru dari
+https://github.com/denysuse/agenpro-releases/releases/latest, install
+seperti biasa. Data lama tetap tersimpan.</p>
+<p>Q: Apakah aplikasi gratis? A: Trial gratis 5 hari. Hubungi WhatsApp
++62 812-7707-7838 untuk info lisensi.</p>
+<p>Q: Bagaimana cara hapus semua data? A: Pengaturan HP, Apps, AgenPro,
+lalu Clear Storage. Atau uninstall aplikasi.</p>
+<p>Q: Apa bedanya APE dengan premi biasa? A: APE = premi disetahunkan
+(Bulanan x 12, Kuartalan x 4, dll). Premi biasa = jumlah yang dibayar
+per periode.</p>
+<p>Q: Kenapa nasabah saya tidak punya produk? A: Di v1.2.0, nasabah
+hanya menyimpan identitas. Produk dan polis ada di masing-masing polis.
+Tambah polis via Detail Nasabah, lalu + Tambah Polis.</p>
+<hr />
+<h2 id="kontak-dukungan">17. Kontak &amp; Dukungan</h2>
+<ul>
+<li>Email: denysuse@gmail.com</li>
+<li>WhatsApp: +62 812-7707-7838 (https://wa.me/6281277077838)</li>
+<li>Privacy Policy: https://denysuse.github.io/privacy-policy/</li>
+<li>Download APK:
+https://github.com/denysuse/agenpro-releases/releases/latest</li>
+</ul>
+<hr />
+<p>Copyright 2026 AgenPro. All rights reserved.</p>
+</body>
+</html>

@@ -1,0 +1,5 @@
+
+# APK (upload via Releases, bukan commit)
+app-release.apk
+*.apk
+*.aab

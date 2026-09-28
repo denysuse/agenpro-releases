@@ -24,7 +24,7 @@ Atau langsung: [app-release.apk](../../releases/download/v1.2.0/app-release.apk)
 
 ## 📖 Dokumentasi
 
-- [Panduan Pengguna](https://denysuse.github.io/agenpro-landing/USER_MANUAL.pdf)
+- [Panduan Pengguna (PDF)](docs/USER_MANUAL.pdf)
 - [Kebijakan Privasi](https://denysuse.github.io/privacy-policy/)
 
 ## 🎁 Trial
