@@ -1,7 +1,7 @@
 # Panduan Pengguna AgenPro
 
-**Versi: 1.2.0**
-**Terakhir diperbarui: 28 September 2026**
+**Versi: 1.3.0**
+**Terakhir diperbarui: 29 September 2026**
 
 ---
 
@@ -22,8 +22,9 @@
 13. Pengaturan & Kustomisasi
 14. Backup & Restore
 15. Import & Export CSV
-16. FAQ
-17. Kontak & Dukungan
+16. Verifikasi Keaslian APK
+17. FAQ
+18. Kontak & Dukungan
 
 ---
 
@@ -39,7 +40,7 @@
 - Kirim WhatsApp dengan template
 - Melihat statistik penjualan & grafik tren
 
-### Fitur Utama v1.2.0
+### Fitur Utama v1.3.0
 
 - Data tersimpan 100% lokal di HP Anda (privat & aman)
 - Backup terenkripsi dengan PIN
@@ -51,6 +52,14 @@
 - Reminder Jatuh Tempo otomatis (H-30/H-7/H-1)
 - Import CSV prospek & polis (bulk)
 - Dukungan tablet (layout 2 kolom)
+
+### 🆕 Fitur Baru di v1.3.0
+
+- **🔔 Notifikasi Kustom** — Suara, getaran, dan tombol aksi (Lihat, Tandai selesai, Tunda 1 jam) langsung dari notifikasi.
+- **💰 Format Rupiah Otomatis** — Input Premi dan Estimasi Premi otomatis diformat (contoh: 8.000.000).
+- **⏰ Reminder H-0 Jatuh Tempo** — Notifikasi jatuh tempo muncul tepat di hari-H, bukan cuma H-30/H-7/H-1.
+- **🎂 Birthday Reminder Lebih Cepat** — Dipercepat dari 30 menit jadi 1 menit setelah aplikasi dibuka.
+- **🔒 Obfuscation Lisensi** — Modul lisensi ter-obfuscate penuh (R8 inline) untuk keamanan.
 
 ---
 
@@ -144,7 +153,7 @@ Catatan: Produk & polis tidak diinput di sini. Setelah jadi nasabah, tambahkan p
 3. Isi data: Nama (wajib), No HP/WA, Kota Domisili, Tanggal Lahir
 4. Tap "Simpan"
 
-Catatan v1.2.0: Nasabah hanya menyimpan identitas. Produk, nomor polis, premi, dan tanggal jatuh tempo diinput di masing-masing polis.
+Catatan v1.3.0: Nasabah hanya menyimpan identitas. Produk, nomor polis, premi, dan tanggal jatuh tempo diinput di masing-masing polis.
 
 ### 5.2 Cari & Filter
 
@@ -318,7 +327,20 @@ Tap ikon jam di baris agenda untuk tunda 1 jam, 3 jam, 1 hari, 3 hari, atau pili
 
 ### 10.4 Notifikasi Pengingat
 
-Aplikasi mengirim notifikasi sesuai waktu pengingat yang diatur.
+
+Aplikasi mengirim notifikasi sesuai waktu pengingat yang diatur, dengan detail:
+
+- **Suara & Getaran** — Notifikasi berbunyi & bergetar (bisa diatur di Pengaturan HP).
+- **Tombol Aksi**:
+  - **Lihat** — Buka detail agenda/polis langsung.
+  - **Tandai selesai** — Selesaikan agenda tanpa buka aplikasi.
+  - **Tunda 1 jam** — Tunda notifikasi 1 jam ke depan.
+- **Jenis Notifikasi**:
+  - Agenda follow-up (H-24 jam & H-4 jam)
+  - Jatuh tempo premi (H-30, H-7, H-1, dan H-0/hari ini)
+  - Ulang tahun nasabah (H-1 & hari-H)
+- **Jika notifikasi tidak muncul**: Cek *Pengaturan HP → Aplikasi → AgenPro → Notifikasi* → pastikan diizinkan.
+- **Matikan "Pause app activity if unused"** di pengaturan aplikasi agar notifikasi tidak dimatikan Android saat aplikasi lama tidak dibuka.
 
 ### 10.5 Tandai Selesai
 
@@ -456,7 +478,65 @@ Aturan:
 
 ---
 
-## 16. FAQ
+## 16. Verifikasi Keaslian APK
+
+Sebelum install, pastikan APK yang Anda download **asli dari sumber resmi**.
+
+### 16.1 Sumber Resmi
+
+Download hanya dari:
+
+- **Landing page**: https://denysuse.github.io/agenpro-landing/
+- **GitHub Releases**: https://github.com/denysuse/agenpro-releases/releases/latest
+- **WhatsApp resmi**: https://wa.me/6281277077838
+
+**Jangan install dari sumber lain** meskipun gratis.
+
+### 16.2 SHA-256 Checksum
+
+Checksum v1.3.0:
+
+    2614f17f88a346de1d6da215642a414761222a5f509a1a0d0c7b85f88a1aef2c
+
+Jika hasil download Anda berbeda → **jangan install**, hubungi kami.
+
+### 16.3 Cara Verifikasi
+
+**Android:**
+1. Install app **Hash Droid** dari Play Store
+2. Buka file APK → pilih algoritma SHA-256
+3. Cocokkan hasilnya dengan checksum di atas
+
+**Windows (PowerShell):**
+
+    Get-FileHash app-release.apk -Algorithm SHA256
+
+**Mac / Linux:**
+
+    shasum -a 256 app-release.apk
+
+### 16.4 Scan VirusTotal
+
+APK kami dipindai oleh 70+ antivirus di VirusTotal secara otomatis:
+
+- Link scan: https://www.virustotal.com/gui/file/2614f17f88a346de1d6da215642a414761222a5f509a1a0d0c7b85f88a1aef2c
+
+Anda bisa cek hasilnya sendiri untuk memastikan tidak ada malware.
+
+### 16.5 Keamanan Data
+
+- ✅ **Semua data tersimpan LOKAL** di HP Anda (Room database)
+- ✅ **Tidak ada koneksi ke server kami** — tidak ada data yang dikirim ke mana pun
+- ✅ **Tidak ada tracking analytics**
+- ✅ **Tidak ada iklan**
+- ✅ **Tidak menjual data** ke pihak ketiga
+
+Satu-satunya koneksi keluar adalah:
+- Google Drive Backup (opsional — hanya jika Anda aktifkan)
+- WhatsApp API (saat kirim pesan ke nasabah)
+
+---
+## 17. FAQ
 
 Q: Apakah data saya aman?
 A: Ya. Semua data tersimpan lokal di HP Anda (Room database). Kami tidak memiliki akses ke data Anda. Backup terenkripsi dengan PIN.
@@ -492,11 +572,11 @@ Q: Apa bedanya APE dengan premi biasa?
 A: APE = premi disetahunkan (Bulanan x 12, Kuartalan x 4, dll). Premi biasa = jumlah yang dibayar per periode.
 
 Q: Kenapa nasabah saya tidak punya produk?
-A: Di v1.2.0, nasabah hanya menyimpan identitas. Produk dan polis ada di masing-masing polis. Tambah polis via Detail Nasabah, lalu + Tambah Polis.
+A: Di v1.3.0, nasabah hanya menyimpan identitas. Produk dan polis ada di masing-masing polis. Tambah polis via Detail Nasabah, lalu + Tambah Polis.
 
 ---
 
-## 17. Kontak & Dukungan
+## 18. Kontak & Dukungan
 
 - Email: denysuse@gmail.com
 - WhatsApp: +62 812-7707-7838 (https://wa.me/6281277077838)

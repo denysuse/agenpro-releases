@@ -1,347 +1,174 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
 <head>
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>Panduan Pengguna AgenPro v1.2.0</title>
+  <title>Panduan Pengguna AgenPro v1.3.0</title>
   <style>
-    html {
-      color: #1a1a1a;
-      background-color: #fdfdfd;
-    }
-    body {
-      margin: 0 auto;
-      max-width: 36em;
-      padding-left: 50px;
-      padding-right: 50px;
-      padding-top: 50px;
-      padding-bottom: 50px;
-      hyphens: auto;
-      overflow-wrap: break-word;
-      text-rendering: optimizeLegibility;
-      font-kerning: normal;
-    }
-    @media (max-width: 600px) {
-      body {
-        font-size: 0.9em;
-        padding: 12px;
-      }
-      h1 {
-        font-size: 1.8em;
-      }
-    }
-    @media print {
-      html {
-        background-color: white;
-      }
-      body {
-        background-color: transparent;
-        color: black;
-        font-size: 12pt;
-      }
-      p, h2, h3 {
-        orphans: 3;
-        widows: 3;
-      }
-      h2, h3, h4 {
-        page-break-after: avoid;
-      }
-    }
-    p {
-      margin: 1em 0;
-    }
-    a {
-      color: #1a1a1a;
-    }
-    a:visited {
-      color: #1a1a1a;
-    }
-    img {
-      max-width: 100%;
-    }
-    h1, h2, h3, h4, h5, h6 {
-      margin-top: 1.4em;
-    }
-    h5, h6 {
-      font-size: 1em;
-      font-style: italic;
-    }
-    h6 {
-      font-weight: normal;
-    }
-    ol, ul {
-      padding-left: 1.7em;
-      margin-top: 1em;
-    }
-    li > ol, li > ul {
-      margin-top: 0;
-    }
-    blockquote {
-      margin: 1em 0 1em 1.7em;
-      padding-left: 1em;
-      border-left: 2px solid #e6e6e6;
-      color: #606060;
-    }
-    code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
-      font-size: 85%;
-      margin: 0;
-      hyphens: manual;
-    }
-    pre {
-      margin: 1em 0;
-      overflow: auto;
-    }
-    pre code {
-      padding: 0;
-      overflow: visible;
-      overflow-wrap: normal;
-    }
-    .sourceCode {
-     background-color: transparent;
-     overflow: visible;
-    }
-    hr {
-      background-color: #1a1a1a;
-      border: none;
-      height: 1px;
-      margin: 1em 0;
-    }
-    table {
-      margin: 1em 0;
-      border-collapse: collapse;
-      width: 100%;
-      overflow-x: auto;
-      display: block;
-      font-variant-numeric: lining-nums tabular-nums;
-    }
-    table caption {
-      margin-bottom: 0.75em;
-    }
-    tbody {
-      margin-top: 0.5em;
-      border-top: 1px solid #1a1a1a;
-      border-bottom: 1px solid #1a1a1a;
-    }
-    th {
-      border-top: 1px solid #1a1a1a;
-      padding: 0.25em 0.5em 0.25em 0.5em;
-    }
-    td {
-      padding: 0.125em 0.5em 0.25em 0.5em;
-    }
-    header {
-      margin-bottom: 4em;
-      text-align: center;
-    }
-    #TOC li {
-      list-style: none;
-    }
-    #TOC ul {
-      padding-left: 1.3em;
-    }
-    #TOC > ul {
-      padding-left: 0;
-    }
-    #TOC a:not(:hover) {
-      text-decoration: none;
-    }
-    code{white-space: pre-wrap;}
-    span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
-    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
-    /* The extra [class] is a hack that increases specificity enough to
-       override a similar rule in reveal.js */
-    ul.task-list[class]{list-style: none;}
-    ul.task-list li input[type="checkbox"] {
-      font-size: inherit;
-      width: 0.8em;
-      margin: 0 0.8em 0.2em -1.6em;
-      vertical-align: middle;
-    }
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
-  </style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+background-color: #1a1a1a;
+border: none;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+</style>
 </head>
 <body>
 <header id="title-block-header">
-<h1 class="title">Panduan Pengguna AgenPro v1.2.0</h1>
+<h1 class="title">Panduan Pengguna AgenPro v1.3.0</h1>
 </header>
-<nav id="TOC" role="doc-toc">
-<ul>
-<li><a href="#panduan-pengguna-agenpro"
-id="toc-panduan-pengguna-agenpro">Panduan Pengguna AgenPro</a>
-<ul>
-<li><a href="#daftar-isi" id="toc-daftar-isi">Daftar Isi</a></li>
-<li><a href="#pengenalan" id="toc-pengenalan">1. Pengenalan</a>
-<ul>
-<li><a href="#fitur-utama-v1.2.0" id="toc-fitur-utama-v1.2.0">Fitur
-Utama v1.2.0</a></li>
-</ul></li>
-<li><a href="#instalasi-persiapan" id="toc-instalasi-persiapan">2.
-Instalasi &amp; Persiapan</a>
-<ul>
-<li><a href="#instalasi" id="toc-instalasi">2.1 Instalasi</a></li>
-<li><a href="#syarat-minimal" id="toc-syarat-minimal">2.2 Syarat
-Minimal</a></li>
-<li><a href="#setup-profil-awal" id="toc-setup-profil-awal">2.3 Setup
-Profil Awal</a></li>
-</ul></li>
-<li><a href="#onboarding-pertama-kali"
-id="toc-onboarding-pertama-kali">3. Onboarding Pertama Kali</a></li>
-<li><a href="#manajemen-prospek" id="toc-manajemen-prospek">4. Manajemen
-Prospek</a>
-<ul>
-<li><a href="#menambah-prospek" id="toc-menambah-prospek">4.1 Menambah
-Prospek</a></li>
-<li><a href="#melihat-detail-prospek"
-id="toc-melihat-detail-prospek">4.2 Melihat Detail Prospek</a></li>
-<li><a href="#edit-hapus" id="toc-edit-hapus">4.3 Edit &amp;
-Hapus</a></li>
-<li><a href="#filter-cari" id="toc-filter-cari">4.4 Filter &amp;
-Cari</a></li>
-<li><a href="#konversi-ke-nasabah" id="toc-konversi-ke-nasabah">4.5
-Konversi ke Nasabah</a></li>
-</ul></li>
-<li><a href="#manajemen-nasabah" id="toc-manajemen-nasabah">5. Manajemen
-Nasabah</a>
-<ul>
-<li><a href="#menambah-nasabah" id="toc-menambah-nasabah">5.1 Menambah
-Nasabah</a></li>
-<li><a href="#cari-filter" id="toc-cari-filter">5.2 Cari &amp;
-Filter</a></li>
-<li><a href="#badge-jatuh-tempo" id="toc-badge-jatuh-tempo">5.3 Badge
-Jatuh Tempo</a></li>
-<li><a href="#kontak-cepat" id="toc-kontak-cepat">5.4 Kontak
-Cepat</a></li>
-<li><a href="#hapus-nasabah" id="toc-hapus-nasabah">5.5 Hapus
-Nasabah</a></li>
-</ul></li>
-<li><a href="#manajemen-polis" id="toc-manajemen-polis">6. Manajemen
-Polis</a>
-<ul>
-<li><a href="#menambah-polis" id="toc-menambah-polis">6.1 Menambah
-Polis</a></li>
-<li><a href="#edit-hapus-polis" id="toc-edit-hapus-polis">6.2 Edit &amp;
-Hapus Polis</a></li>
-<li><a href="#status-polis" id="toc-status-polis">6.3 Status
-Polis</a></li>
-<li><a href="#multiple-polis" id="toc-multiple-polis">6.4 Multiple
-Polis</a></li>
-</ul></li>
-<li><a href="#pembayaran-premi" id="toc-pembayaran-premi">7. Pembayaran
-Premi</a>
-<ul>
-<li><a href="#mencatat-pembayaran" id="toc-mencatat-pembayaran">7.1
-Mencatat Pembayaran</a></li>
-<li><a href="#auto-roll-jatuh-tempo" id="toc-auto-roll-jatuh-tempo">7.2
-Auto-Roll Jatuh Tempo</a></li>
-<li><a href="#riwayat-pembayaran" id="toc-riwayat-pembayaran">7.3
-Riwayat Pembayaran</a></li>
-<li><a href="#hapus-pembayaran" id="toc-hapus-pembayaran">7.4 Hapus
-Pembayaran</a></li>
-</ul></li>
-<li><a href="#interaksi-nasabah" id="toc-interaksi-nasabah">8. Interaksi
-Nasabah</a>
-<ul>
-<li><a href="#menambah-interaksi" id="toc-menambah-interaksi">8.1
-Menambah Interaksi</a></li>
-<li><a href="#hapus-interaksi" id="toc-hapus-interaksi">8.2 Hapus
-Interaksi</a></li>
-<li><a href="#manfaat" id="toc-manfaat">8.3 Manfaat</a></li>
-</ul></li>
-<li><a href="#dashboard-premi" id="toc-dashboard-premi">9. Dashboard
-Premi</a>
-<ul>
-<li><a href="#ape-bulan-ini" id="toc-ape-bulan-ini">9.1 APE Bulan
-Ini</a></li>
-<li><a href="#ape-tahun-ini" id="toc-ape-tahun-ini">9.2 APE Tahun
-Ini</a></li>
-<li><a href="#target-ape" id="toc-target-ape">9.3 Target APE</a></li>
-<li><a href="#grafik-tren-6-bulan" id="toc-grafik-tren-6-bulan">9.4
-Grafik Tren 6 Bulan</a></li>
-<li><a href="#portofolio-aktif" id="toc-portofolio-aktif">9.5 Portofolio
-Aktif</a></li>
-<li><a href="#jatuh-tempo-30-hari" id="toc-jatuh-tempo-30-hari">9.6
-Jatuh Tempo 30 Hari</a></li>
-</ul></li>
-<li><a href="#agenda-follow-up" id="toc-agenda-follow-up">10. Agenda
-&amp; Follow-up</a>
-<ul>
-<li><a href="#menambah-agenda" id="toc-menambah-agenda">10.1 Menambah
-Agenda</a></li>
-<li><a href="#kelompok-agenda" id="toc-kelompok-agenda">10.2 Kelompok
-Agenda</a></li>
-<li><a href="#snooze-tunda" id="toc-snooze-tunda">10.3 Snooze
-(Tunda)</a></li>
-<li><a href="#notifikasi-pengingat" id="toc-notifikasi-pengingat">10.4
-Notifikasi Pengingat</a></li>
-<li><a href="#tandai-selesai" id="toc-tandai-selesai">10.5 Tandai
-Selesai</a></li>
-</ul></li>
-<li><a href="#pipeline-penjualan" id="toc-pipeline-penjualan">11.
-Pipeline Penjualan</a>
-<ul>
-<li><a href="#tampilan-mobile" id="toc-tampilan-mobile">11.1 Tampilan
-Mobile</a></li>
-<li><a href="#tampilan-tablet" id="toc-tampilan-tablet">11.2 Tampilan
-Tablet</a></li>
-<li><a href="#tahap-pipeline" id="toc-tahap-pipeline">11.3 Tahap
-Pipeline</a></li>
-</ul></li>
-<li><a href="#whatsapp-integration" id="toc-whatsapp-integration">12.
-WhatsApp Integration</a>
-<ul>
-<li><a href="#kirim-whatsapp-dari-prospeknasabah"
-id="toc-kirim-whatsapp-dari-prospeknasabah">12.1 Kirim WhatsApp dari
-Prospek/Nasabah</a></li>
-<li><a href="#template-whatsapp" id="toc-template-whatsapp">12.2
-Template WhatsApp</a></li>
-<li><a href="#edit-template" id="toc-edit-template">12.3 Edit
-Template</a></li>
-</ul></li>
-<li><a href="#pengaturan-kustomisasi"
-id="toc-pengaturan-kustomisasi">13. Pengaturan &amp; Kustomisasi</a>
-<ul>
-<li><a href="#tema-warna" id="toc-tema-warna">13.1 Tema Warna</a></li>
-<li><a href="#mode-gelap" id="toc-mode-gelap">13.2 Mode Gelap</a></li>
-<li><a href="#target-penjualan" id="toc-target-penjualan">13.3 Target
-Penjualan</a></li>
-<li><a href="#pin-lock" id="toc-pin-lock">13.4 PIN Lock</a></li>
-<li><a href="#business-card" id="toc-business-card">13.5 Business
-Card</a></li>
-</ul></li>
-<li><a href="#backup-restore" id="toc-backup-restore">14. Backup &amp;
-Restore</a>
-<ul>
-<li><a href="#backup-ke-perangkat" id="toc-backup-ke-perangkat">14.1
-Backup ke Perangkat</a></li>
-<li><a href="#restore-dari-backup" id="toc-restore-dari-backup">14.2
-Restore dari Backup</a></li>
-<li><a href="#backup-otomatis" id="toc-backup-otomatis">14.3 Backup
-Otomatis</a></li>
-<li><a href="#backup-ke-google-drive-opsional"
-id="toc-backup-ke-google-drive-opsional">14.4 Backup ke Google Drive
-(Opsional)</a></li>
-</ul></li>
-<li><a href="#import-export-csv" id="toc-import-export-csv">15. Import
-&amp; Export CSV</a>
-<ul>
-<li><a href="#export-csv" id="toc-export-csv">15.1 Export CSV</a></li>
-<li><a href="#import-prospek-csv" id="toc-import-prospek-csv">15.2
-Import Prospek CSV</a></li>
-<li><a href="#import-polis-csv" id="toc-import-polis-csv">15.3 Import
-Polis CSV</a></li>
-</ul></li>
-<li><a href="#faq" id="toc-faq">16. FAQ</a></li>
-<li><a href="#kontak-dukungan" id="toc-kontak-dukungan">17. Kontak &amp;
-Dukungan</a></li>
-</ul></li>
-</ul>
-</nav>
 <h1 id="panduan-pengguna-agenpro">Panduan Pengguna AgenPro</h1>
-<p><strong>Versi: 1.2.0</strong> <strong>Terakhir diperbarui: 28
+<p><strong>Versi: 1.3.0</strong> <strong>Terakhir diperbarui: 29
 September 2026</strong></p>
 <hr />
 <h2 id="daftar-isi">Daftar Isi</h2>
@@ -361,6 +188,7 @@ September 2026</strong></p>
 <li>Pengaturan &amp; Kustomisasi</li>
 <li>Backup &amp; Restore</li>
 <li>Import &amp; Export CSV</li>
+<li>Verifikasi Keaslian APK</li>
 <li>FAQ</li>
 <li>Kontak &amp; Dukungan</li>
 </ol>
@@ -377,7 +205,7 @@ asuransi yang membantu Anda:</p>
 <li>Kirim WhatsApp dengan template</li>
 <li>Melihat statistik penjualan &amp; grafik tren</li>
 </ul>
-<h3 id="fitur-utama-v1.2.0">Fitur Utama v1.2.0</h3>
+<h3 id="fitur-utama-v1.3.0">Fitur Utama v1.3.0</h3>
 <ul>
 <li>Data tersimpan 100% lokal di HP Anda (privat &amp; aman)</li>
 <li>Backup terenkripsi dengan PIN</li>
@@ -389,6 +217,19 @@ asuransi yang membantu Anda:</p>
 <li>Reminder Jatuh Tempo otomatis (H-30/H-7/H-1)</li>
 <li>Import CSV prospek &amp; polis (bulk)</li>
 <li>Dukungan tablet (layout 2 kolom)</li>
+</ul>
+<h3 id="fitur-baru-di-v1.3.0">🆕 Fitur Baru di v1.3.0</h3>
+<ul>
+<li><strong>🔔 Notifikasi Kustom</strong> — Suara, getaran, dan tombol
+aksi (Lihat, Tandai selesai, Tunda 1 jam) langsung dari notifikasi.</li>
+<li><strong>💰 Format Rupiah Otomatis</strong> — Input Premi dan
+Estimasi Premi otomatis diformat (contoh: 8.000.000).</li>
+<li><strong>⏰ Reminder H-0 Jatuh Tempo</strong> — Notifikasi jatuh
+tempo muncul tepat di hari-H, bukan cuma H-30/H-7/H-1.</li>
+<li><strong>🎂 Birthday Reminder Lebih Cepat</strong> — Dipercepat dari
+30 menit jadi 1 menit setelah aplikasi dibuka.</li>
+<li><strong>🔒 Obfuscation Lisensi</strong> — Modul lisensi
+ter-obfuscate penuh (R8 inline) untuk keamanan.</li>
 </ul>
 <hr />
 <h2 id="instalasi-persiapan">2. Instalasi &amp; Persiapan</h2>
@@ -477,7 +318,7 @@ Polis.</p>
 <li>Isi data: Nama (wajib), No HP/WA, Kota Domisili, Tanggal Lahir</li>
 <li>Tap “Simpan”</li>
 </ol>
-<p>Catatan v1.2.0: Nasabah hanya menyimpan identitas. Produk, nomor
+<p>Catatan v1.3.0: Nasabah hanya menyimpan identitas. Produk, nomor
 polis, premi, dan tanggal jatuh tempo diinput di masing-masing
 polis.</p>
 <h3 id="cari-filter">5.2 Cari &amp; Filter</h3>
@@ -630,7 +471,30 @@ Berikutnya (mendatang).</p>
 <p>Tap ikon jam di baris agenda untuk tunda 1 jam, 3 jam, 1 hari, 3
 hari, atau pilih tanggal dan waktu spesifik.</p>
 <h3 id="notifikasi-pengingat">10.4 Notifikasi Pengingat</h3>
-<p>Aplikasi mengirim notifikasi sesuai waktu pengingat yang diatur.</p>
+<p>Aplikasi mengirim notifikasi sesuai waktu pengingat yang diatur,
+dengan detail:</p>
+<ul>
+<li><strong>Suara &amp; Getaran</strong> — Notifikasi berbunyi &amp;
+bergetar (bisa diatur di Pengaturan HP).</li>
+<li><strong>Tombol Aksi</strong>:
+<ul>
+<li><strong>Lihat</strong> — Buka detail agenda/polis langsung.</li>
+<li><strong>Tandai selesai</strong> — Selesaikan agenda tanpa buka
+aplikasi.</li>
+<li><strong>Tunda 1 jam</strong> — Tunda notifikasi 1 jam ke depan.</li>
+</ul></li>
+<li><strong>Jenis Notifikasi</strong>:
+<ul>
+<li>Agenda follow-up (H-24 jam &amp; H-4 jam)</li>
+<li>Jatuh tempo premi (H-30, H-7, H-1, dan H-0/hari ini)</li>
+<li>Ulang tahun nasabah (H-1 &amp; hari-H)</li>
+</ul></li>
+<li><strong>Jika notifikasi tidak muncul</strong>: Cek <em>Pengaturan HP
+→ Aplikasi → AgenPro → Notifikasi</em> → pastikan diizinkan.</li>
+<li><strong>Matikan “Pause app activity if unused”</strong> di
+pengaturan aplikasi agar notifikasi tidak dimatikan Android saat
+aplikasi lama tidak dibuka.</li>
+</ul>
 <h3 id="tandai-selesai">10.5 Tandai Selesai</h3>
 <p>Tap checkbox di kiri agenda untuk tandai selesai.</p>
 <hr />
@@ -737,38 +601,118 @@ tanggalJatuhTempo, status.</p>
 preview)</li>
 </ul>
 <hr />
-<h2 id="faq">16. FAQ</h2>
-<p>Q: Apakah data saya aman? A: Ya. Semua data tersimpan lokal di HP
+<h2 id="verifikasi-keaslian-apk">16. Verifikasi Keaslian APK</h2>
+<p>Sebelum install, pastikan APK yang Anda download <strong>asli dari
+sumber resmi</strong>.</p>
+<h3 id="sumber-resmi">16.1 Sumber Resmi</h3>
+<p>Download hanya dari:</p>
+<ul>
+<li><strong>Landing page</strong>:
+https://denysuse.github.io/agenpro-landing/</li>
+<li><strong>GitHub Releases</strong>:
+https://github.com/denysuse/agenpro-releases/releases/latest</li>
+<li><strong>WhatsApp resmi</strong>: https://wa.me/6281277077838</li>
+</ul>
+<p><strong>Jangan install dari sumber lain</strong> meskipun gratis.</p>
+<h3 id="sha-256-checksum">16.2 SHA-256 Checksum</h3>
+<p>Checksum v1.3.0:</p>
+<pre><code>2614f17f88a346de1d6da215642a414761222a5f509a1a0d0c7b85f88a1aef2c</code></pre>
+<p>Jika hasil download Anda berbeda → <strong>jangan install</strong>,
+hubungi kami.</p>
+<h3 id="cara-verifikasi">16.3 Cara Verifikasi</h3>
+<p><strong>Android:</strong> 1. Install app <strong>Hash Droid</strong>
+dari Play Store 2. Buka file APK → pilih algoritma SHA-256 3. Cocokkan
+hasilnya dengan checksum di atas</p>
+<p><strong>Windows (PowerShell):</strong></p>
+<pre><code>Get-FileHash app-release.apk -Algorithm SHA256</code></pre>
+<p><strong>Mac / Linux:</strong></p>
+<pre><code>shasum -a 256 app-release.apk</code></pre>
+<h3 id="scan-virustotal">16.4 Scan VirusTotal</h3>
+<p>APK kami dipindai oleh 70+ antivirus di VirusTotal secara
+otomatis:</p>
+<ul>
+<li>Link scan:
+https://www.virustotal.com/gui/file/2614f17f88a346de1d6da215642a414761222a5f509a1a0d0c7b85f88a1aef2c</li>
+</ul>
+<p>Anda bisa cek hasilnya sendiri untuk memastikan tidak ada
+malware.</p>
+<h3 id="keamanan-data">16.5 Keamanan Data</h3>
+<ul>
+<li>✅ <strong>Semua data tersimpan LOKAL</strong> di HP Anda (Room
+database)</li>
+<li>✅ <strong>Tidak ada koneksi ke server kami</strong> — tidak ada
+data yang dikirim ke mana pun</li>
+<li>✅ <strong>Tidak ada tracking analytics</strong></li>
+<li>✅ <strong>Tidak ada iklan</strong></li>
+<li>✅ <strong>Tidak menjual data</strong> ke pihak ketiga</li>
+</ul>
+<p>Satu-satunya koneksi keluar adalah: - Google Drive Backup (opsional —
+hanya jika Anda aktifkan) - WhatsApp API (saat kirim pesan ke
+nasabah)</p>
+<table style="width:6%;">
+<colgroup>
+<col style="width: 5%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td>## 17. FAQ</td>
+</tr>
+<tr class="even">
+<td>Q: Apakah data saya aman? A: Ya. Semua data tersimpan lokal di HP
 Anda (Room database). Kami tidak memiliki akses ke data Anda. Backup
-terenkripsi dengan PIN.</p>
-<p>Q: Bagaimana kalau HP saya hilang? A: Data akan hilang kecuali Anda
+terenkripsi dengan PIN.</td>
+</tr>
+<tr class="odd">
+<td>Q: Bagaimana kalau HP saya hilang? A: Data akan hilang kecuali Anda
 punya backup. Rekomendasi: Backup rutin ke Google Drive atau
-flashdisk.</p>
-<p>Q: Apakah bisa dipakai di beberapa HP? A: Tidak secara langsung. Anda
-perlu backup di HP 1, lalu restore di HP 2.</p>
-<p>Q: Apakah butuh internet? A: Tidak untuk fungsi utama. Internet hanya
-untuk backup Google Drive (opsional) dan update aplikasi.</p>
-<p>Q: Bagaimana cara export data? A: Pengaturan, Laporan, lalu “Ekspor
-laporan CSV”. File bisa dibuka di Excel.</p>
-<p>Q: PIN saya lupa, bagaimana? A: Sayangnya, PIN tidak bisa dipulihkan
+flashdisk.</td>
+</tr>
+<tr class="even">
+<td>Q: Apakah bisa dipakai di beberapa HP? A: Tidak secara langsung.
+Anda perlu backup di HP 1, lalu restore di HP 2.</td>
+</tr>
+<tr class="odd">
+<td>Q: Apakah butuh internet? A: Tidak untuk fungsi utama. Internet
+hanya untuk backup Google Drive (opsional) dan update aplikasi.</td>
+</tr>
+<tr class="even">
+<td>Q: Bagaimana cara export data? A: Pengaturan, Laporan, lalu “Ekspor
+laporan CSV”. File bisa dibuka di Excel.</td>
+</tr>
+<tr class="odd">
+<td>Q: PIN saya lupa, bagaimana? A: Sayangnya, PIN tidak bisa dipulihkan
 (demi keamanan). Anda perlu uninstall, lalu install ulang (data
-hilang).</p>
-<p>Q: Apakah ada versi iOS? A: Belum. Saat ini hanya Android.</p>
-<p>Q: Bagaimana cara update aplikasi? A: Download APK versi terbaru dari
-https://github.com/denysuse/agenpro-releases/releases/latest, install
-seperti biasa. Data lama tetap tersimpan.</p>
-<p>Q: Apakah aplikasi gratis? A: Trial gratis 5 hari. Hubungi WhatsApp
-+62 812-7707-7838 untuk info lisensi.</p>
-<p>Q: Bagaimana cara hapus semua data? A: Pengaturan HP, Apps, AgenPro,
-lalu Clear Storage. Atau uninstall aplikasi.</p>
-<p>Q: Apa bedanya APE dengan premi biasa? A: APE = premi disetahunkan
+hilang).</td>
+</tr>
+<tr class="even">
+<td>Q: Apakah ada versi iOS? A: Belum. Saat ini hanya Android.</td>
+</tr>
+<tr class="odd">
+<td>Q: Bagaimana cara update aplikasi? A: Download APK versi terbaru
+dari https://github.com/denysuse/agenpro-releases/releases/latest,
+install seperti biasa. Data lama tetap tersimpan.</td>
+</tr>
+<tr class="even">
+<td>Q: Apakah aplikasi gratis? A: Trial gratis 5 hari. Hubungi WhatsApp
++62 812-7707-7838 untuk info lisensi.</td>
+</tr>
+<tr class="odd">
+<td>Q: Bagaimana cara hapus semua data? A: Pengaturan HP, Apps, AgenPro,
+lalu Clear Storage. Atau uninstall aplikasi.</td>
+</tr>
+<tr class="even">
+<td>Q: Apa bedanya APE dengan premi biasa? A: APE = premi disetahunkan
 (Bulanan x 12, Kuartalan x 4, dll). Premi biasa = jumlah yang dibayar
-per periode.</p>
-<p>Q: Kenapa nasabah saya tidak punya produk? A: Di v1.2.0, nasabah
+per periode.</td>
+</tr>
+<tr class="odd">
+<td>Q: Kenapa nasabah saya tidak punya produk? A: Di v1.3.0, nasabah
 hanya menyimpan identitas. Produk dan polis ada di masing-masing polis.
-Tambah polis via Detail Nasabah, lalu + Tambah Polis.</p>
-<hr />
-<h2 id="kontak-dukungan">17. Kontak &amp; Dukungan</h2>
+Tambah polis via Detail Nasabah, lalu + Tambah Polis.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kontak-dukungan">18. Kontak &amp; Dukungan</h2>
 <ul>
 <li>Email: denysuse@gmail.com</li>
 <li>WhatsApp: +62 812-7707-7838 (https://wa.me/6281277077838)</li>
