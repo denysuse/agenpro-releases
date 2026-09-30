@@ -1,7 +1,7 @@
 # Panduan Pengguna AgenPro
 
-**Versi: 1.3.0**
-**Terakhir diperbarui: 29 September 2026**
+**Versi: 1.4.0**
+**Terakhir diperbarui: 30 September 2026**
 
 ---
 
@@ -40,7 +40,7 @@
 - Kirim WhatsApp dengan template
 - Melihat statistik penjualan & grafik tren
 
-### Fitur Utama v1.3.0
+### Fitur Utama v1.4.0
 
 - Data tersimpan 100% lokal di HP Anda (privat & aman)
 - Backup terenkripsi dengan PIN
@@ -53,7 +53,12 @@
 - Import CSV prospek & polis (bulk)
 - Dukungan tablet (layout 2 kolom)
 
-### 🆕 Fitur Baru di v1.3.0
+### 🆕 Fitur Baru di v1.4.0
+
+- **🗂️ 11 Sumber Prospek** — Referral, Cold Market, Sosial Media, Event/Seminar, Walk-in, Website, Kampanye WhatsApp, Iklan Digital, Organik, Referensi, Lainnya.
+- **✨ Transisi iOS-like** — Slide horizontal + fade saat berpindah antar tab, terasa lebih halus dan premium.
+
+### 🎁 Fitur Bawaan v1.3.0
 
 - **🔔 Notifikasi Kustom** — Suara, getaran, dan tombol aksi (Lihat, Tandai selesai, Tunda 1 jam) langsung dari notifikasi.
 - **💰 Format Rupiah Otomatis** — Input Premi dan Estimasi Premi otomatis diformat (contoh: 8.000.000).
@@ -153,7 +158,7 @@ Catatan: Produk & polis tidak diinput di sini. Setelah jadi nasabah, tambahkan p
 3. Isi data: Nama (wajib), No HP/WA, Kota Domisili, Tanggal Lahir
 4. Tap "Simpan"
 
-Catatan v1.3.0: Nasabah hanya menyimpan identitas. Produk, nomor polis, premi, dan tanggal jatuh tempo diinput di masing-masing polis.
+Catatan v1.4.0: Nasabah hanya menyimpan identitas. Produk, nomor polis, premi, dan tanggal jatuh tempo diinput di masing-masing polis.
 
 ### 5.2 Cari & Filter
 
@@ -494,9 +499,9 @@ Download hanya dari:
 
 ### 16.2 SHA-256 Checksum
 
-Checksum v1.3.0:
+Checksum v1.4.0:
 
-    2614f17f88a346de1d6da215642a414761222a5f509a1a0d0c7b85f88a1aef2c
+    2ec171941bbc8b749e36737a33bfd13689bf4f9cf7cc48990e52f9f194598d59
 
 Jika hasil download Anda berbeda → **jangan install**, hubungi kami.
 
@@ -519,7 +524,7 @@ Jika hasil download Anda berbeda → **jangan install**, hubungi kami.
 
 APK kami dipindai oleh 70+ antivirus di VirusTotal secara otomatis:
 
-- Link scan: https://www.virustotal.com/gui/file/2614f17f88a346de1d6da215642a414761222a5f509a1a0d0c7b85f88a1aef2c
+- Link scan: https://www.virustotal.com/gui/file/2ec171941bbc8b749e36737a33bfd13689bf4f9cf7cc48990e52f9f194598d59
 
 Anda bisa cek hasilnya sendiri untuk memastikan tidak ada malware.
 
@@ -536,6 +541,31 @@ Satu-satunya koneksi keluar adalah:
 - WhatsApp API (saat kirim pesan ke nasabah)
 
 ---
+
+### 16.6 Penjelasan Tag VirusTotal
+
+Saat Anda cek APK AgenPro di VirusTotal, mungkin muncul beberapa tag. Berikut penjelasannya:
+
+| Tag | Penjelasan |
+|---|---|
+| `android` | File APK untuk Android — normal |
+| `contains-elf` | Berisi library native (SQLite untuk database) — normal |
+| `obfuscated` | Kode di-obfuscate untuk keamanan — bagus |
+| `reflection` | Bagian dari obfuscation — normal |
+| `checks-gps` | Dari library WorkManager, bukan untuk melacak Anda |
+| `telephony` | Hanya untuk tombol "Telepon" di Detail Nasabah — bukan merekam |
+| `apk` | Format file — normal |
+
+**Yang perlu diyakinkan:**
+
+- ✅ **0 dari 68 antivirus** mendeteksi malware
+- ✅ **Tidak ada permission GPS** di aplikasi
+- ✅ **Tidak ada permission mikrofon/kamera**
+- ✅ **Semua data tersimpan lokal** di HP Anda
+
+Kalau ada antivirus tertentu yang mendeteksi (false positive), biasanya karena
+obfuscation R8 — laporkan ke kami dengan screenshot untuk kami tindak lanjut.
+
 ## 17. FAQ
 
 Q: Apakah data saya aman?
@@ -572,7 +602,7 @@ Q: Apa bedanya APE dengan premi biasa?
 A: APE = premi disetahunkan (Bulanan x 12, Kuartalan x 4, dll). Premi biasa = jumlah yang dibayar per periode.
 
 Q: Kenapa nasabah saya tidak punya produk?
-A: Di v1.3.0, nasabah hanya menyimpan identitas. Produk dan polis ada di masing-masing polis. Tambah polis via Detail Nasabah, lalu + Tambah Polis.
+A: Di v1.4.0, nasabah hanya menyimpan identitas. Produk dan polis ada di masing-masing polis. Tambah polis via Detail Nasabah, lalu + Tambah Polis.
 
 ---
 
